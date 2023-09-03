@@ -1,34 +1,45 @@
+Southern Lights Assignment (SL_TEST)
+
+Overview
+The Calculations Dashboard is a web application designed to provide insights into hydrogen production economics. The app offers three main sections: CAPEX (Capital Expenditure), Hydrogen Production, and LCOH (Levelized Cost of Hydrogen). Users can input specific parameters in the CAPEX and Hydrogen Production sections, such as installation and hardware costs or yearly hydrogen production levels. The app then calculates the Levelized Cost of Hydrogen (LCOH) based on these inputs and visualizes the results through line and doughnut charts. The dashboard aims to make it easier for stakeholders to understand the financial viability of hydrogen production projects.
+
+Design Choices
+1. Next.js: For server-side rendering and better SEO capabilities.
+2. Tailwind CSS: For a utility-first approach to styling, which speeds up development.
+3. React Hooks: To manage component state and side-effects.
+4. State Management: Local component state was used, as the application is not overly complex to require Redux or MobX.
+
+Implementation Details
+1. Capex Form: Users input the capital expenditure data. The form validates and posts the data to the server.
+2. H2 Production: Another form that handles H2 production data.
+3. LCOH: This section calculates the Levelized Cost of Hydrogen based on the data from Capex and H2 Production forms.
+4. Charts: Used Charts.js for data visualization.
+
+AI Usage
+OpenAI's GPT-4 was used to assist in generating content for the README and for code suggestions.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+Instructions to Run Locally
 
-```bash
+Clone the Repo
+git clone https://github.com/Nollis/sl_test.git
+
+Navigate into the directory
+cd /sl_test
+
+Install dependencies
+npm install
+
+Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit localhost
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Additional Comments
+I decided to use charts for the responses because it is easier to understand the results, and it is more fun to code =)
+Future Enhancements: I would work on making it more responsive, colors and layout. I would also try making more components for reuseability.
